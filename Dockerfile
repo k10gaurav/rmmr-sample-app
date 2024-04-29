@@ -10,10 +10,10 @@ RUN groupadd -g 15000 mygroup && \
      
 
 # Copy the entire folder into the container
-COPY rmmr-sample-app/ /usr/local/tomcat/webapps/rmmr-sample-app
+COPY rmmr-sample-app.war /usr/local/tomcat/webapps/
 
 # Change ownership of the directory to the non-root user
-RUN chown -R ${USER}:${USER_GROUP} /usr/local/tomcat/webapps/rmmr-sample-app
+RUN chown -R ${USER}:${USER_GROUP} /usr/local/tomcat/webapps
 RUN chmod -R 777 /usr/local/tomcat
 
 # Expose the default Tomcat port
