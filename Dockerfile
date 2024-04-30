@@ -1,5 +1,5 @@
 # Use a base image with Java and Tomcat pre-installed
-FROM tomcat:9-jdk11-temurin-focal
+FROM tomcat:9
 
 # create a user group and a user
 #RUN  addgroup -g 10001 wso2; \
